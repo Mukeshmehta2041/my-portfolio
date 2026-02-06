@@ -6,54 +6,28 @@ import { useInView } from 'react-intersection-observer';
 const experiences = [
   {
     title: 'Senior Full-Stack Developer',
-    company: 'Tech Solutions Inc.',
-    period: '2022 - Present',
+    company: 'Cloudprism Solutions',
+    period: '2023 - Present',
     description:
-      'Leading development of microservices architecture, mentoring junior developers, and architecting scalable solutions for enterprise clients.',
+      'Leading end-to-end delivery of cloud-native web platforms, from architecture and API design to frontend implementation and production hardening.',
     highlights: [
-      'Architected microservices handling 10M+ requests/month',
-      'Led team of 5 developers on critical platforms',
-      'Improved application performance by 60%',
-      'Established best practices for API design and security',
+      'Designed and evolved full-stack architecture for multi-tenant platforms',
+      'Led cross-functional work across frontend, backend, and DevOps',
+      'Improved reliability and performance of customer-facing systems',
+      'Mentored engineers and helped standardize engineering practices',
     ],
   },
   {
-    title: 'Full-Stack Developer',
-    company: 'Digital Innovations Ltd.',
-    period: '2020 - 2022',
+    title: 'Independent Full-Stack Engineer (Project Work)',
+    company: 'Selected Projects',
+    period: 'Prior to 2023',
     description:
-      'Built and maintained full-stack applications, implemented CI/CD pipelines, and optimized database queries for production systems.',
+      'Worked on a range of web and platform initiatives across learning, government, hiring, and healthcare domains, with a focus on production-ready implementations.',
     highlights: [
-      'Developed e-learning platform serving 10K+ students',
-      'Implemented OAuth 2.0 authentication system',
-      'Optimized database queries reducing response time by 70%',
-      'Set up Docker and Kubernetes for containerization',
-    ],
-  },
-  {
-    title: 'Frontend Developer',
-    company: 'Web Dynamics Co.',
-    period: '2019 - 2020',
-    description:
-      'Developed responsive user interfaces, implemented state management solutions, and ensured cross-browser compatibility.',
-    highlights: [
-      'Built responsive websites for 50+ clients',
-      'Implemented Redux for complex state management',
-      'Achieved 95+ Lighthouse score across projects',
-      'Mentored 3 junior developers',
-    ],
-  },
-  {
-    title: 'Junior Developer',
-    company: 'StartUp Hub',
-    period: '2018 - 2019',
-    description:
-      'Contributed to feature development, bug fixes, and participated in code reviews while learning industry best practices.',
-    highlights: [
-      'Developed core features for SaaS platform',
-      'Fixed 200+ bugs and implemented improvements',
-      'Collaborated with design team on UI implementation',
-      'Completed professional training programs',
+      'Delivered full-stack features for LMS, portals, and internal tools',
+      'Implemented authentication, data models, and integration layers',
+      'Optimized performance, monitoring, and deployment workflows',
+      'Collaborated with teams to translate requirements into shipped software',
     ],
   },
 ];
@@ -101,7 +75,7 @@ export default function Experience() {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16">

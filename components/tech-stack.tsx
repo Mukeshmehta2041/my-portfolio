@@ -55,7 +55,7 @@ export default function TechStack() {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-16 text-center">
@@ -139,10 +139,10 @@ export default function TechStack() {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { label: 'Technologies Mastered', value: '25+' },
-            { label: 'Years of Experience', value: '8+' },
+            { label: 'Technologies Used in Production', value: '25+' },
+            { label: 'Years of Experience', value: '3+' },
             { label: 'Open Source Contributions', value: '40+' },
-            { label: 'Problems Solved', value: '1000+' },
+            { label: 'Production Issues Resolved', value: '1000+' },
           ].map((stat, index) => (
             <motion.div
               key={index}

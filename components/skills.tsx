@@ -101,7 +101,7 @@ export default function Skills() {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-20">
@@ -165,7 +165,7 @@ export default function Skills() {
           className="mt-16 p-8 rounded-lg bg-gradient-to-r from-card/30 to-card/10 border border-border/30 backdrop-blur-sm"
         >
           <p className="text-center text-foreground/70">
-            I'm constantly learning and adapting to new technologies. Always open to exploring cutting-edge frameworks, tools, and architectural patterns to solve complex problems efficiently.
+            I focus on continuous learning and applying cutting-edge frameworks and architectural patterns to solve complex problems in production.
           </p>
         </motion.div>
       </motion.div>

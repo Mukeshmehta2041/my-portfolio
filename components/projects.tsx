@@ -5,47 +5,80 @@ import { useInView } from 'react-intersection-observer';
 
 const projects = [
   {
-    title: 'Government Portal',
+    title: 'Large-Scale Learning Management Platform',
     description:
-      'GIGW-compliant secure government website. Architected with role-based access control, document management, and accessibility standards. Serves 100,000+ citizens with 99.9% uptime.',
-    tech: ['Next.js', 'Spring Boot', 'PostgreSQL', 'Docker'],
-    impact: '100K+ citizens | 99.9% uptime',
+      'Led the design and development of an enterprise LMS for thousands of concurrent learners, with role-based access, modular course delivery, and instructor analytics dashboards. Implemented secure auth, assessment workflows, and integrated payments backed by a resilient backend.',
+    tech: [
+      'React',
+      'Next.js',
+      'Node.js',
+      'Spring Boot',
+      'REST',
+      'GraphQL',
+      'MySQL',
+      'Redis',
+      'Docker',
+      'AWS',
+    ],
+    impact:
+      'Thousands of concurrent learners | Stable production releases | Centralized training platform for multiple teams',
     featured: true,
   },
   {
-    title: 'E-Learning Platform',
+    title: 'Government-Grade Information Portal',
     description:
-      'Full-featured LMS with instructor/student dashboards, video hosting, progress tracking, Stripe integration, and analytics.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    impact: '10K+ students | 500+ courses',
+      'Contributed to a high-compliance public portal using modern SSR architecture and a CMS-driven content model. Focused on accessibility-first UI, secure content publishing workflows, and performance that holds up under public-traffic spikes.',
+    tech: ['Next.js', 'Headless CMS', 'PostgreSQL', 'Docker', 'AWS'],
+    impact:
+      'Public-facing government portal | Accessibility and security aligned with standards | Reliable content publishing at scale',
   },
   {
-    title: 'Smart Insights App',
+    title: 'Enterprise Job & Recruitment Platform',
     description:
-      'Analytics platform helping business owners track sales trends, receive real-time alerts, and optimize revenue.',
-    tech: ['React', 'Next.js', 'PostgreSQL', 'Tailwind'],
-    impact: '500+ business owners',
+      'Designed and implemented core modules for a recruitment SaaS handling job listings, candidate pipelines, and admin workflows. Built advanced filtering and search, OAuth-based authentication, and APIs for integrating with external HR systems.',
+    tech: ['Next.js', 'Node.js', 'REST APIs', 'OAuth', 'PostgreSQL', 'Cloud Deployment'],
+    impact:
+      'High-volume job and candidate flows | Consistent hiring workflows across teams | Solid foundation for future integrations',
   },
   {
-    title: 'Job Portal',
+    title: 'Hospital & Healthcare Web System',
     description:
-      'Enterprise job platform with OAuth auth, advanced filtering, company profiles, and multi-source integration.',
-    tech: ['Next.js', 'Express', 'PostgreSQL', 'OAuth 2.0'],
-    impact: '50K+ listings | 100K+ users',
-  },
-  {
-    title: 'Hospital Management',
-    description:
-      'SEO-optimized healthcare website with appointment booking, patient records, and headless CMS integration.',
+      'Built a responsive, performance-optimized healthcare website with a focus on patient usability and discoverability. Implemented SEO best practices, CMS-driven updates, maps and contact flows, and accessibility-friendly UI components.',
     tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Headless CMS'],
-    impact: '80% faster bookings',
+    impact:
+      'Improved patient discovery and appointment access | Fast, accessible experience across devices | Simple content operations for staff',
   },
   {
-    title: 'Library System',
+    title: 'Enterprise Assessment & Evaluation Platform',
     description:
-      'Performance-optimized library platform with catalog, reservations, fine tracking, and admin dashboard.',
-    tech: ['React', 'Spring Boot', 'MySQL', 'Redis'],
-    impact: '20K+ users | 2M+ loans/year',
+      'Developed a secure assessment platform used for recruitment and internal evaluations, including MCQ-based exams, automated scoring pipelines, and analytics views for reviewers. Paid careful attention to exam integrity, data security, and operational simplicity.',
+    tech: ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Redis'],
+    impact:
+      'Standardized assessment flows | Reduced manual scoring effort | Clear, auditable evaluation outcomes',
+  },
+  {
+    title: 'High-Performance Content-Driven Website',
+    description:
+      'Implemented a headless CMS–driven content platform that separates editorial workflows from the frontend. Integrated GraphQL and Apollo Client, built reusable UI components, and tuned caching and search to keep large content libraries fast and discoverable.',
+    tech: ['Next.js', 'WordPress (Headless)', 'GraphQL', 'Apollo Client'],
+    impact:
+      'Large structured content library | Fast page loads and search | Smooth editorial publishing experience',
+  },
+  {
+    title: 'Cloud-Native Microservices Architecture',
+    description:
+      'Worked on a cloud-native microservices setup focused on scalability, resilience, and observability. Containerized services, wired up CI/CD pipelines, added centralized logging and metrics, and optimized data access patterns with caching where it actually mattered.',
+    tech: ['Docker', 'Kubernetes', 'Redis', 'Elasticsearch', 'CI/CD', 'AWS'],
+    impact:
+      'More predictable deployments | Better visibility into production | Backend that scales without dramatic rewrites',
+  },
+  {
+    title: 'Business Insights & Analytics Application',
+    description:
+      'Built a lightweight analytics application that converts raw operational data into clear insights for non-technical users. Designed guided data input flows, implemented trend and alert logic, and kept backend responses fast enough for interactive exploration.',
+    tech: ['React', 'Next.js', 'Node.js', 'PostgreSQL'],
+    impact:
+      'Actionable insights for business users | Shorter feedback loops | Data surfaced in a way people actually use',
   },
 ];
 
@@ -201,12 +234,12 @@ export default function Projects() {
           className="mt-20 text-center"
         >
           <motion.a
-            href="#contact"
+            href="#experience"
             whileHover={{ scale: 1.05, boxShadow: '0 0 25px rgba(56, 189, 248, 0.2)' }}
             whileTap={{ scale: 0.95 }}
             className="inline-block px-10 py-4 border border-accent text-accent font-semibold rounded-none hover:bg-accent/5 transition-all duration-300"
           >
-            Explore Full Portfolio
+            See More Work
           </motion.a>
         </motion.div>
       </div>

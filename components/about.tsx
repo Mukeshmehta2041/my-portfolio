@@ -46,7 +46,7 @@ export default function About() {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="max-w-6xl mx-auto px-6 md:px-8 relative z-10"
+        className="max-w-7xl mx-auto px-6 md:px-8 relative z-10"
       >
         {/* Section Header */}
         <motion.div variants={itemVariants} className="mb-20">
@@ -69,7 +69,7 @@ export default function About() {
           {/* Left Column */}
           <motion.div variants={itemVariants} className="space-y-8">
             <p className="text-lg text-foreground/90 leading-relaxed">
-              Mukesh is a Senior Full-Stack Engineer with <span className="text-accent font-semibold">8+ years</span> building production systems that handle real-world traffic, pass security audits, and deliver measurable impact.
+              Mukesh is a Senior Full-Stack Engineer with <span className="text-accent font-semibold">3+ years</span> building production systems that handle real-world traffic, pass security audits, and deliver measurable impact.
             </p>
 
             <p className="text-base text-foreground/70 leading-relaxed">
@@ -96,7 +96,7 @@ export default function About() {
             </ul>
 
             <p className="text-base text-foreground/70 leading-relaxed pt-4 border-t border-foreground/10">
-              My focus: speed, security, and shipping systems that actually survive production.
+              My focus is building fast, secure systems that behave predictably in production.
             </p>
           </motion.div>
 
@@ -108,8 +108,8 @@ export default function About() {
             className="space-y-4"
           >
             {[
-              { label: 'Years Building', value: '8+', icon: '⚙️' },
-              { label: 'Projects Shipped', value: '50+', icon: '🚀' },
+              { label: 'Years Building', value: '3+', icon: '⚙️' },
+              { label: 'Projects Shipped', value: '20+', icon: '🚀' },
               { label: 'Users Impacted', value: '1M+', icon: '👥' },
               { label: 'Tech Stack', value: '25+', icon: '🛠️' },
             ].map((stat, index) => (

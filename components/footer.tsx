@@ -1,5 +1,10 @@
 'use client';
 
+/**
+ * Footer: brand, links, expertise summary.
+ * No "Services" as hire menu (moonlighting policy compliance).
+ */
+
 import { motion } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
 
@@ -49,7 +54,7 @@ export default function Footer() {
               Mukesh
             </motion.div>
             <p className="text-sm text-foreground/60 leading-relaxed">
-              Building high-performance web applications and scalable systems. Passionate about clean code and user experience.
+              I build high-performance web applications and scalable systems. Passionate about clean code and user experience.
             </p>
           </motion.div>
 
@@ -69,20 +74,12 @@ export default function Footer() {
             </ul>
           </motion.div>
 
-          {/* Services */}
+          {/* Expertise summary only; not a bookable services list (policy) */}
           <motion.div variants={itemVariants}>
-            <h3 className="font-semibold text-foreground mb-4">Services</h3>
-            <ul className="space-y-2">
-              {['Full-Stack Development', 'System Architecture', 'Performance Optimization', 'Consultation'].map((service) => (
-                <motion.li
-                  key={service}
-                  whileHover={{ x: 4 }}
-                  className="text-sm text-foreground/70 hover:text-cyan-400 transition-colors"
-                >
-                  {service}
-                </motion.li>
-              ))}
-            </ul>
+            <h3 className="font-semibold text-foreground mb-4">Expertise</h3>
+            <p className="text-sm text-foreground/70 leading-relaxed">
+              Full-stack development · System design · Performance · Production systems
+            </p>
           </motion.div>
         </div>
 

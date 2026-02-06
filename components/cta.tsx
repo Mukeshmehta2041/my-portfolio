@@ -1,5 +1,10 @@
 'use client';
 
+/**
+ * Contact section: professional contact only.
+ * No freelance/availability language (moonlighting policy compliance).
+ */
+
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Linkedin, Github, Twitter } from 'lucide-react';
@@ -56,22 +61,22 @@ export default function CTA() {
         variants={containerVariants}
         initial="hidden"
         animate={inView ? 'visible' : 'hidden'}
-        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
       >
-        {/* Main CTA Content */}
+        {/* Contact: professional connection only; no project/availability language */}
         <motion.div
           variants={itemVariants}
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-8 leading-tight tracking-tight">
-            Have a Hard Problem?
+            Get in Touch
             <span className="block text-accent">
-              I Build Systems That Handle It.
+              Connect
             </span>
           </h2>
 
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Whether you need architectural guidance, full-stack development, or production expertise—let's build something that doesn't break at scale.
+            For professional inquiries, technical discussion, or to say hello—reach out via the links below.
           </p>
         </motion.div>
 
@@ -86,7 +91,7 @@ export default function CTA() {
             whileTap={{ scale: 0.97 }}
             className="px-10 py-4 rounded-none bg-accent text-background font-semibold shadow-luxury-sm hover:shadow-luxury transition-all text-center"
           >
-            Let's Talk
+            Email Me
           </motion.a>
           <motion.a
             href="#projects"
@@ -121,7 +126,7 @@ export default function CTA() {
           })}
         </motion.div>
 
-        {/* Stats Grid */}
+        {/* Experience stats only; no availability or response-time promises (policy) */}
         <motion.div
           variants={itemVariants}
           className="p-8 rounded-lg bg-gradient-to-br from-card/50 to-card/30 border border-border/50 backdrop-blur-sm"
@@ -129,19 +134,19 @@ export default function CTA() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
               {
-                stat: '24H',
-                label: 'Response Time',
-                description: 'I respond to inquiries within 24 hours',
+                stat: '3+',
+                label: 'Years',
+                description: 'Building production systems',
               },
               {
-                stat: '100%',
-                label: 'Satisfaction',
-                description: 'Committed to exceeding expectations',
+                stat: '20+',
+                label: 'Projects',
+                description: 'Shipped and maintained',
               },
               {
-                stat: '∞',
-                label: 'Availability',
-                description: 'Flexible timezones and arrangements',
+                stat: '1M+',
+                label: 'Users',
+                description: 'Impacted through my work',
               },
             ].map((item, index) => (
               <motion.div

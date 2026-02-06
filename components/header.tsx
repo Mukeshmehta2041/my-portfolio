@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
@@ -25,15 +26,20 @@ export default function Header() {
         transition={{ duration: 0.5 }}
         className="max-w-7xl mx-auto px-6 md:px-8 py-3 flex justify-between items-center"
       >
-        {/* Logo - Animated */}
+        {/* Logo - full opacity so cyan/blue stays visible on dark background */}
         <motion.button
-          onClick={() => scrollToSection('about')}
-          whileHover={{ scale: 1.1 }}
-          animate={{ opacity: [0.7, 1, 0.7] }}
-          transition={{ duration: 3, repeat: Infinity }}
-          className="text-2xl font-bold text-accent cursor-pointer font-mono tracking-tight"
+          onClick={() => scrollToSection('hero')}
+          whileHover={{ scale: 1.05 }}
+          className="cursor-pointer flex items-center shrink-0"
         >
-          M
+          <Image
+            src="/logo.png"
+            alt="Mukesh logo"
+            width={140}
+            height={44}
+            className="h-9 w-auto opacity-100"
+            priority
+          />
         </motion.button>
 
         {/* Desktop Navigation */}

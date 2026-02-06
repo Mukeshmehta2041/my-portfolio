@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
+const roles = ['Senior Full-Stack Engineer', 'Systems Architect', 'Production Expert'];
+
 export default function Hero() {
   const [displayedRole, setDisplayedRole] = useState('');
-  const roles = ['Senior Full-Stack Engineer', 'Systems Architect', 'Production Expert'];
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
@@ -33,7 +34,7 @@ export default function Hero() {
     }
 
     return () => clearTimeout(timer);
-  }, [displayedRole, roleIndex, isDeleting, roles]);
+  }, [displayedRole, roleIndex, isDeleting]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -69,7 +70,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated background elements */}
       <motion.div
         className="absolute top-20 left-10 w-96 h-96 rounded-full"
@@ -102,7 +103,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -112,34 +113,38 @@ export default function Hero() {
           {/* Eyebrow */}
           <motion.div variants={itemVariants} className="mb-8">
             <span className="text-sm font-mono text-accent tracking-widest uppercase">
-              Welcome to my workspace
+              Personal portfolio
             </span>
           </motion.div>
 
           {/* Main headline - Multi-line with individual animations */}
           <div className="mb-8">
-            <motion.div custom={0} variants={lineVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none mb-2">
+            <motion.div custom={0} variants={lineVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-2">
               I Build
             </motion.div>
-            <motion.div custom={1} variants={lineVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none mb-2">
+            <motion.div custom={1} variants={lineVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-2">
               <span className="text-accent">Scalable,</span>
             </motion.div>
-            <motion.div custom={2} variants={lineVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none mb-2">
+            <motion.div custom={2} variants={lineVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-2">
               <span className="text-accent">Secure,</span>
             </motion.div>
-            <motion.div custom={3} variants={lineVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-none relative">
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 blur-xl"
-                animate={{
-                  opacity: [0, 0.3, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-              <span className="text-accent">High-Performance</span> Systems
+            <motion.div custom={3} variants={lineVariants} className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight relative">
+              <span className="relative inline-block">
+                <motion.div
+                  className="absolute inset-0 bg-accent/20 blur-2xl rounded-full"
+                  animate={{
+                    opacity: [0, 0.4, 0],
+                    scale: [0.8, 1.1, 0.8],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
+                <span className="text-accent relative z-10">High-Performance</span>
+              </span>
+              {" "}Systems
             </motion.div>
           </div>
 
@@ -180,8 +185,8 @@ export default function Hero() {
           {/* Stats with counters */}
           <motion.div variants={itemVariants} className="grid grid-cols-3 gap-8 md:gap-12 max-w-2xl">
             {[
-              { value: '50+', label: 'Projects Shipped' },
-              { value: '8+', label: 'Years Experience' },
+              { value: '20+', label: 'Projects Shipped' },
+              { value: '3+', label: 'Years Experience' },
               { value: '1M+', label: 'Users Impacted' },
             ].map((stat, index) => (
               <motion.div key={index} className="text-left">
