@@ -76,7 +76,7 @@ export default function CTA() {
           </h2>
 
           <p className="text-lg text-foreground/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-            For professional inquiries, technical discussion, or to say hello—reach out via the links below.
+            Say hello—reach out via the links below.
           </p>
         </motion.div>
 

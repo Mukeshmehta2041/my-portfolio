@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const roles = ['Senior Full-Stack Engineer', 'Systems Architect', 'Production Expert'];
@@ -108,8 +109,9 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-left"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center text-left"
         >
+          <div>
           {/* Eyebrow */}
           <motion.div variants={itemVariants} className="mb-8">
             <span className="text-sm font-mono text-accent tracking-widest uppercase">
@@ -201,6 +203,31 @@ export default function Hero() {
                 <div className="text-sm text-gray-400">{stat.label}</div>
               </motion.div>
             ))}
+          </motion.div>
+          </div>
+
+          {/* Photo - right side, hidden on mobile, visible from lg up */}
+          <motion.div
+            variants={itemVariants}
+            className="hidden lg:flex relative justify-center lg:justify-end items-center"
+          >
+            <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="absolute inset-0 rounded-full ring-2 ring-accent/30 shadow-2xl shadow-accent/10 overflow-hidden bg-foreground/5"
+              >
+                <Image
+                  src="/my-img.png"
+                  alt="Mukesh - Systems Architect & Full-Stack Engineer"
+                  fill
+                  sizes="(max-width: 640px) 224px, (max-width: 1024px) 288px, 320px"
+                  className="object-cover"
+                  priority
+                />
+              </motion.div>
+            </div>
           </motion.div>
         </motion.div>
       </div>
